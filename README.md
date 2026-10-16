@@ -101,38 +101,6 @@ jede:
 
 Mismo procedimiento con `_data/software.yml`, `_data/lineas.yml` y `_data/entidades.yml`; cada archivo explica sus campos en los comentarios del principio. Los logos de entidades se suben a `assets/logos/entidades/` y se indican con `logo: entidades/nombre.svg`.
 
-## Previsualizar en local
-
-Solo hace falta para cambios de diseño; para editar contenido basta GitHub.
-
-1. Instalar Ruby:
-   - Windows: [RubyInstaller](https://rubyinstaller.org/) (versión *with Devkit*), y al terminar aceptar la instalación de MSYS2.
-   - macOS: `brew install ruby`.
-   - Linux: `sudo apt install ruby-full build-essential`.
-2. En la carpeta del repositorio, una sola vez:
-   ```
-   gem install bundler
-   bundle install
-   ```
-3. Cada vez que se quiera ver la web:
-   ```
-   bundle exec jekyll serve
-   ```
-   y abrir <http://localhost:4000/oed-seio/>. La página se regenera sola al guardar cambios (salvo `_config.yml`, que requiere reiniciar).
-
-El `Gemfile` usa la gema `github-pages`, que instala las mismas versiones que usa GitHub, así que lo que se ve en local es lo que se publica.
-
-## Publicar
-
-GitHub Pages desde la rama principal: *Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`*.
-
-## Convenciones
-
-- Textos en español, tono sobrio y académico.
-- No inventar datos: lo que falte se deja como marcador entre corchetes, `[...]`.
-- Sin servicios de terceros: ni analítica, ni cookies, ni fuentes o scripts externos.
-- Colores de texto con contraste suficiente (WCAG AA). El naranja del logo `#E8590C` se usa solo en gráficos; para texto o botones con texto blanco, `#C44A0B`.
-
 ## Licencia
 
 El código se distribuye bajo la licencia MIT (ver `LICENSE`). El contenido (textos e imágenes) se distribuye bajo CC BY 4.0, salvo los logotipos, que son propiedad de sus titulares. Las tipografías Rubik y Atkinson Hyperlegible se distribuyen bajo la SIL Open Font License 1.1 (ver `assets/fonts/`).
