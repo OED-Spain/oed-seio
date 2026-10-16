@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'es' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title and page.url != "/" %}{{ page.title }} · {{ site.title_corto }}{% else %}{{ site.title }} · SEIO{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description | strip_newlines | strip }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preload" href="{{ '/assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/rubik-latin-600-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/estilos.css' | relative_url }}">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+{% include cabecera.html %}
+<main id="contenido" tabindex="-1">
+{{ content }}
+</main>
+{% include pie.html %}
+</body>
+</html>

@@ -1,0 +1,5 @@
+<path d="M3 38 V25 Q24 15 45 25 V38"></path>
+<path d="M8 38 V33 A5 5 0 0 1 18 33 V38"></path>
+<path d="M19 38 V30 A5 5 0 0 1 29 30 V38"></path>
+<path d="M30 38 V33 A5 5 0 0 1 40 33 V38"></path>
+<path d="M2 43 H46" stroke="#E8590C" stroke-dasharray="4 4"></path>

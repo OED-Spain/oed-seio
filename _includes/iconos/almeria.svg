@@ -1,0 +1,4 @@
+<path d="M9 22 A15 15 0 0 1 39 22"></path>
+<path d="M9 22 H39"></path>
+<circle cx="24" cy="14" r="3.5" fill="#E8590C" stroke="none"></circle>
+<path d="M24 22 V33 M24 33 L17 43 M24 33 L31 43"></path>

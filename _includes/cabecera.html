@@ -1,0 +1,14 @@
+<header class="cabecera">
+  <div class="contenedor cabecera__interior">
+    <a class="logo" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/logos/oed/svg/OED-group_grafito-naranja_claro_transparente.svg' | relative_url }}" width="422" height="163" alt="OED, Grupo de Trabajo de Diseño de Experimentos: inicio">
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <ul>
+        {%- for item in site.data.navegacion %}
+        <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.titulo }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

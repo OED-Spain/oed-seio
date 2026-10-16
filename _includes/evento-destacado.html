@@ -1,0 +1,36 @@
+{%- comment -%}
+  Bloque del próximo evento (datos en _data/eventos.yml → proximo).
+  Parámetros: id (para aria-labelledby), portada (true en la página de inicio).
+{%- endcomment -%}
+{%- assign ev = site.data.eventos.proximo -%}
+{%- if ev -%}
+<section class="contenedor seccion-evento" aria-labelledby="{{ include.id }}">
+  <div class="evento">
+    <div class="evento__texto">
+      <span class="pastilla pastilla--acento">{% if include.portada %}Próximo evento{% else %}Próximo · {{ ev.etiqueta }}{% endif %}</span>
+      <h2 id="{{ include.id }}" class="evento__titulo">{% if include.portada and ev.titulo_portada %}{{ ev.titulo_portada }}{% else %}{{ ev.titulo }}{% endif %}</h2>
+      {%- if ev.descripcion %}
+      <p class="evento__descripcion">{{ ev.descripcion }}</p>
+      {%- endif %}
+    </div>
+    <div class="evento__ficha">
+    <dl class="evento__datos">
+      <div class="dato">
+        <dt class="etiqueta">Cuándo</dt>
+        <dd class="evento__fecha">{{ ev.fechas }}</dd>
+        {%- if ev.nota_fechas %}
+        <dd class="nota">{{ ev.nota_fechas }}</dd>
+        {%- endif %}
+      </div>
+      <div class="dato">
+        <dt class="etiqueta">Dónde</dt>
+        <dd class="evento__lugar">{{ ev.lugar }}</dd>
+      </div>
+    </dl>
+      {%- if ev.web %}
+      <a class="boton boton--oscuro boton--ancho" href="{{ ev.web }}">Web del congreso</a>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+{%- endif -%}

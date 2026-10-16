@@ -1,0 +1,11 @@
+{%- comment -%}
+  Cabecera de sección: antetítulo, título y entradilla, tomados del
+  front matter de la página (antetitulo, title, entradilla).
+{%- endcomment -%}
+<section class="contenedor intro" aria-labelledby="titulo-pagina">
+  <span class="antetitulo">{{ page.antetitulo }}</span>
+  <h1 id="titulo-pagina" class="titulo-pagina">{{ page.titulo_visible | default: page.title }}</h1>
+  {%- if page.entradilla %}
+  <p class="entradilla">{{ page.entradilla }}</p>
+  {%- endif %}
+</section>
