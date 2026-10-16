@@ -1,0 +1,32 @@
+# Configuración del sitio. Tras cambiar este archivo hay que reiniciar
+# `bundle exec jekyll serve` para que se apliquen los cambios en local.
+
+title: Grupo de Trabajo de Diseño de Experimentos
+title_corto: OED · SEIO
+description: >-
+  Grupo de Trabajo de Diseño de Experimentos de la Sociedad de Estadística
+  e Investigación Operativa (SEIO).
+lang: es
+
+# Dirección de publicación en GitHub Pages: https://oed-spain.github.io/oed-seio/
+# Si algún día se usa un dominio propio, poner aquí ese dominio y dejar baseurl vacío.
+url: https://oed-spain.github.io
+baseurl: /oed-seio
+
+email: oed@seio.es
+repositorio: https://github.com/OED-Spain/oed-seio
+seio: https://www.seio.es
+
+timezone: Europe/Madrid
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - LICENSE
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - web-oed
+  - "*.csv"

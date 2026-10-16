@@ -1,0 +1,21 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+vendor/
+Gemfile.lock
+
+# Datos personales: el CSV original de miembros lleva correos, no se publica
+*.csv
+
+# Documentos de trabajo (no forman parte de la web)
+CLAUDE.md
+.claude/
+web-oed/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
