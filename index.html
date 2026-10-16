@@ -1,0 +1,69 @@
+---
+layout: default
+title: Inicio
+---
+<section class="contenedor portada" aria-labelledby="titulo-portada">
+  <div class="portada__texto">
+    <span class="antetitulo">Sociedad de Estadística e Investigación Operativa</span>
+    <h1 id="titulo-portada" class="titulo-pagina">Grupo de Trabajo de Diseño de Experimentos</h1>
+    <p class="entradilla">Somos el grupo de trabajo de la SEIO dedicado al diseño de experimentos. Reunimos a investigadoras e investigadores de distintas universidades y centros que trabajan en la teoría del diseño óptimo y en su aplicación a problemas reales de la ciencia, la medicina y la industria.</p>
+    <div class="botones">
+      <a class="boton boton--acento" href="{{ '/quienes-somos/' | relative_url }}">Conoce el grupo</a>
+      <a class="boton boton--borde" href="{{ '/software/' | relative_url }}">Software del grupo</a>
+    </div>
+  </div>
+  <figure class="portada__figura">
+    <svg viewBox="0 0 440 440" width="420" height="420" aria-hidden="true" focusable="false">
+      <g stroke="#E1E5EB" stroke-width="1">
+        <path d="M40 40 H400 M40 130 H400 M40 220 H400 M40 310 H400 M40 400 H400"></path>
+        <path d="M40 40 V400 M130 40 V400 M220 40 V400 M310 40 V400 M400 40 V400"></path>
+      </g>
+      <rect x="40" y="40" width="360" height="360" fill="none" stroke="#9AA3B0" stroke-width="1.5"></rect>
+      <g fill="none" stroke="#1C2430" stroke-opacity="0.4" stroke-width="1.2" stroke-dasharray="3 6">
+        <ellipse cx="220" cy="220" rx="70" ry="52"></ellipse>
+        <ellipse cx="220" cy="220" rx="122" ry="96"></ellipse>
+        <ellipse cx="220" cy="220" rx="168" ry="140"></ellipse>
+      </g>
+      <g fill="#E8590C">
+        <circle cx="40" cy="40" r="20"></circle>
+        <circle cx="400" cy="40" r="16"></circle>
+        <circle cx="40" cy="400" r="16"></circle>
+        <circle cx="400" cy="400" r="20"></circle>
+        <circle cx="220" cy="220" r="11"></circle>
+        <circle cx="220" cy="40" r="8"></circle>
+        <circle cx="40" cy="220" r="8"></circle>
+      </g>
+      <g font-family="Atkinson Hyperlegible, sans-serif" font-size="14" fill="#5B6270">
+        <text x="212" y="430">x₁</text>
+        <text x="6" y="226">x₂</text>
+        <text x="246" y="214">ξ*</text>
+      </g>
+    </svg>
+  </figure>
+</section>
+
+{% include evento-destacado.html id="evento-portada" portada="si" %}
+
+<section class="banda" aria-labelledby="entidades">
+  <div class="contenedor entidades">
+    <h2 id="entidades">Entidades participantes</h2>
+    <ul class="rejilla rejilla--170 lista-limpia">
+      {%- for e in site.data.entidades %}
+      {%- capture contenido -%}
+        {%- if e.logo -%}
+        <img src="{{ '/assets/logos/' | append: e.logo | relative_url }}" alt="{{ e.nombre_largo | default: e.nombre }}">
+        {%- else -%}
+        {{ e.nombre }}
+        {%- endif -%}
+      {%- endcapture %}
+      <li>
+        {%- if e.url %}
+        <a class="entidad" href="{{ e.url }}">{{ contenido }}{% if e.nombre_largo and e.logo == nil %}<span class="solo-lectores">: {{ e.nombre_largo }}</span>{% endif %}</a>
+        {%- else %}
+        <div class="entidad{% if e.logo == nil %} entidad--vacia{% endif %}">{{ contenido }}</div>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+---
+layout: default
+title: Software
+antetitulo: Software
+titulo_visible: Herramientas del grupo
+entradilla: Paquetes y aplicaciones web desarrollados por miembros del grupo para calcular, evaluar y comparar diseños.
+---
+{% include intro.html %}
+
+<section class="contenedor seccion-final" aria-label="Herramientas">
+  <div class="rejilla rejilla--480">
+    {%- for s in site.data.software %}
+    <article class="tarjeta herramienta">
+      <div class="herramienta__etiquetas">
+        <span class="pastilla pastilla--suave">{{ s.tipo }}</span>
+        {%- if s.plataforma %}
+        <span class="pastilla">{{ s.plataforma }}</span>
+        {%- endif %}
+      </div>
+      <h2>{{ s.nombre }}</h2>
+      <p>{{ s.descripcion }}</p>
+      {%- if s.autoria %}
+      <p class="herramienta__autoria">Autoría: {{ s.autoria }}</p>
+      {%- endif %}
+      {%- if s.enlace or s.codigo %}
+      <div class="botones">
+        {%- if s.enlace %}
+        <a class="boton boton--acento boton--medio" href="{{ s.enlace }}">{{ s.texto_enlace | default: "Página web" }}<span class="solo-lectores"> de {{ s.nombre }}</span></a>
+        {%- endif %}
+        {%- if s.codigo %}
+        <a class="boton boton--borde boton--medio" href="{{ s.codigo }}">Código fuente<span class="solo-lectores"> de {{ s.nombre }}</span></a>
+        {%- endif %}
+      </div>
+      {%- endif %}
+    </article>
+    {%- endfor %}
+  </div>
+</section>

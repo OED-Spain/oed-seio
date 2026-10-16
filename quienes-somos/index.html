@@ -1,0 +1,85 @@
+---
+layout: default
+title: Quiénes somos
+antetitulo: Quiénes somos
+titulo_visible: El grupo
+entradilla: El Grupo de Trabajo de Diseño de Experimentos forma parte de la Sociedad de Estadística e Investigación Operativa (SEIO). [Año de creación y dos o tres frases sobre la historia del grupo.]
+---
+{% include intro.html %}
+
+<section class="contenedor que-hacemos" aria-label="Qué hacemos">
+  <div class="rejilla rejilla--300">
+    <div class="tarjeta que-hacemos__tarjeta">
+      <h2>Encuentros</h2>
+      <p>Organizamos las jornadas JEDE para jóvenes investigadores y seminarios del grupo.</p>
+      <a class="enlace-flecha" href="{{ '/eventos/' | relative_url }}">Ver eventos <span aria-hidden="true">&nbsp;→</span></a>
+    </div>
+    <div class="tarjeta que-hacemos__tarjeta">
+      <h2>Software</h2>
+      <p>Compartimos herramientas para calcular y evaluar diseños óptimos.</p>
+      <a class="enlace-flecha" href="{{ '/software/' | relative_url }}">Ver software <span aria-hidden="true">&nbsp;→</span></a>
+    </div>
+    <div class="tarjeta que-hacemos__tarjeta">
+      <h2>Formar parte</h2>
+      <p>[Requisitos para unirse al grupo, p. ej. ser socio o socia de la SEIO.]</p>
+      <a class="enlace-flecha" href="{{ '/contacto/' | relative_url }}">Escríbenos <span aria-hidden="true">&nbsp;→</span></a>
+    </div>
+  </div>
+  <p class="coordinacion"><strong>Coordinación:</strong>
+    {%- for c in site.data.coordinacion %}
+    {{ c.nombre }} ({{ c.afiliacion }}){% unless forloop.last %}{% if forloop.rindex == 2 %} y{% else %},{% endif %}{% endunless %}
+    {%- endfor %}
+  </p>
+</section>
+
+{%- comment -%}
+  Orden alfabético por apellido sin tener en cuenta tildes ni mayúsculas:
+  se construye una clave «apellidos nombre» transliterada, se ordena y se
+  recupera cada miembro por su posición en _data/miembros.yml.
+{%- endcomment -%}
+{%- assign claves = "" | split: "" -%}
+{%- for m in site.data.miembros -%}
+  {%- assign base = m.orden | default: m.apellidos | append: " " | append: m.nombre | slugify: "latin" -%}
+  {%- capture clave -%}{{ base }}~{{ forloop.index0 }}{%- endcapture -%}
+  {%- assign claves = claves | push: clave -%}
+{%- endfor -%}
+{%- assign claves = claves | sort %}
+
+<section class="banda banda--borde" aria-labelledby="miembros">
+  <div class="contenedor miembros">
+    <div class="miembros__cabecera">
+      <h2 id="miembros" class="titulo-seccion">Miembros</h2>
+      <p>Por orden alfabético de apellido</p>
+    </div>
+    <ul class="rejilla rejilla--340 lista-limpia">
+      {%- for clave in claves %}
+      {%- assign i = clave | split: "~" | last | plus: 0 %}
+      {%- assign m = site.data.miembros[i] %}
+      {%- assign nombre_completo = m.nombre | append: " " | append: m.apellidos %}
+      <li class="miembro">
+        <div class="miembro__datos">
+          <h3 class="miembro__nombre">{{ nombre_completo }}</h3>
+          {%- if m.afiliacion and m.afiliacion != "" %}
+          <span class="miembro__afiliacion">{{ m.afiliacion }}</span>
+          {%- else %}
+          <span class="miembro__afiliacion marcador">[Universidad o centro]</span>
+          {%- endif %}
+        </div>
+        {%- if m.orcid or m.scholar or m.web %}
+        <ul class="miembro__enlaces">
+          {%- if m.orcid %}
+          <li><a class="boton boton--chico" href="https://orcid.org/{{ m.orcid }}">ORCID<span class="solo-lectores"> de {{ nombre_completo }}</span></a></li>
+          {%- endif %}
+          {%- if m.scholar %}
+          <li><a class="boton boton--chico" href="{{ m.scholar }}">Google Scholar<span class="solo-lectores"> de {{ nombre_completo }}</span></a></li>
+          {%- endif %}
+          {%- if m.web %}
+          <li><a class="boton boton--chico" href="{{ m.web }}">Web<span class="solo-lectores"> de {{ nombre_completo }}</span></a></li>
+          {%- endif %}
+        </ul>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

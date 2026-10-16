@@ -1,0 +1,71 @@
+---
+layout: default
+title: Eventos
+antetitulo: Eventos
+titulo_visible: Jornadas JEDE y seminarios
+entradilla: Desde 2010, el congreso JEDE reúne a jóvenes investigadores en diseño de experimentos y bioestadística, en colaboración con los grupos de trabajo de la SEIO y BIOSTATNET. A lo largo del año organizamos además seminarios del grupo.
+---
+{%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," -%}
+<div class="pagina-eventos">
+{% include intro.html %}
+
+{% include evento-destacado.html id="proximo" %}
+
+<section class="contenedor ediciones" aria-labelledby="ediciones">
+  <h2 id="ediciones" class="titulo-seccion">Ediciones anteriores</h2>
+  <ul class="rejilla rejilla--250 lista-limpia">
+    {%- for e in site.data.eventos.jede %}
+    <li class="tarjeta edicion">
+      <svg viewBox="0 0 48 48" width="56" height="56" aria-hidden="true" focusable="false" fill="none" stroke="#1C2430" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+        {%- assign icono = e.icono | default: "generico" | append: ".svg" %}
+        {% include iconos/{{ icono }} %}
+      </svg>
+      <div class="edicion__datos">
+        <h3>{{ e.edicion }} JEDE</h3>
+        <span class="edicion__lugar">{{ e.anio }} · {{ e.ciudad }}</span>
+      </div>
+      {%- if e.web %}
+      <a class="enlace-flecha" href="{{ e.web }}">Ver edición<span class="solo-lectores"> {{ e.edicion }} JEDE</span><span aria-hidden="true">&nbsp;→</span></a>
+      {%- else %}
+      <span class="edicion__sin-web">Sin web disponible</span>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+{%- assign seminarios = site.data.seminarios | sort: "fecha" | reverse %}
+<section class="banda banda--borde" aria-labelledby="seminarios">
+  <div class="contenedor seminarios">
+    <h2 id="seminarios" class="titulo-seccion">Seminarios</h2>
+    <ul class="seminarios__lista">
+      {%- for s in seminarios %}
+      {%- assign f = s.fecha | date: "%Y-%m-%d" | split: "-" %}
+      {%- assign mes = f[1] | plus: 0 | minus: 1 %}
+      <li class="seminario">
+        <span class="seminario__fecha"><time datetime="{{ s.fecha | date: '%Y-%m-%d' }}">{{ f[2] | plus: 0 }} {{ meses[mes] }} {{ f[0] }}</time></span>
+        <div class="seminario__cuerpo">
+          <span class="seminario__titulo">{{ s.titulo }}</span>
+          <span class="seminario__ponente">{{ s.ponente }}{% if s.afiliacion %} · {{ s.afiliacion }}{% endif %}</span>
+        </div>
+        {%- if s.modalidad %}
+        <span class="seminario__modalidad">{{ s.modalidad }}</span>
+        {%- endif %}
+        {%- if s.enlace %}
+        <a class="enlace-flecha" href="{{ s.enlace }}">Diapositivas y grabación<span class="solo-lectores">: {{ s.titulo }}</span><span aria-hidden="true">&nbsp;→</span></a>
+        {%- endif %}
+      </li>
+      {%- else %}
+      <li class="seminario">
+        <span class="seminario__fecha marcador">[DD mes AAAA]</span>
+        <div class="seminario__cuerpo">
+          <span class="seminario__titulo">[Lista de seminarios]</span>
+          <span class="seminario__ponente">[Ponente] · [Universidad]</span>
+        </div>
+        <span class="seminario__modalidad">[En línea / presencial]</span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+</div>

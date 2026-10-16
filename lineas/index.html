@@ -1,0 +1,22 @@
+---
+layout: default
+title: Líneas de investigación
+antetitulo: Investigación
+entradilla: Temas en los que trabajan los miembros del grupo, desde la teoría del diseño óptimo hasta los algoritmos que lo hacen aplicable.
+---
+{% include intro.html %}
+
+<section class="contenedor seccion-final" aria-label="Líneas">
+  <ol class="rejilla rejilla--480 lista-limpia">
+    {%- for l in site.data.lineas %}
+    <li class="tarjeta linea">
+      <span class="linea__numero" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+      <div class="linea__cuerpo">
+        <h2>{{ l.titulo }}</h2>
+        <p>{{ l.descripcion }}</p>
+        <p class="linea__miembros">Miembros: {% if l.miembros and l.miembros.size > 0 %}{{ l.miembros | join: ", " }}{% else %}<span class="marcador">[nombres]</span>{% endif %}</p>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>

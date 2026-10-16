@@ -1,0 +1,43 @@
+---
+layout: default
+title: Contacto
+antetitulo: Contacto
+titulo_visible: Escríbenos
+entradilla: Para dudas sobre el grupo, propuestas de seminarios o colaboraciones, o si quieres unirte.
+---
+{% include intro.html %}
+
+<section class="contenedor correo" aria-labelledby="correo-grupo">
+  <div class="correo__tarjeta">
+    <div class="correo__texto">
+      <h2 id="correo-grupo" class="etiqueta">Correo del grupo</h2>
+      <a class="correo__direccion" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+    <svg width="220" height="116" viewBox="0 0 160 84" aria-hidden="true" focusable="false">
+      <path d="M4 16 H156" stroke="#C9D0DA" stroke-width="2" stroke-dasharray="5 5"></path>
+      <path d="M14 16 C18 52, 30 74, 46 74 C62 74, 72 34, 80 16 C88 34, 98 74, 114 74 C130 74, 142 52, 146 16" fill="none" stroke="#1C2430" stroke-opacity="0.18" stroke-width="6" stroke-linecap="round"></path>
+      <circle cx="14" cy="16" r="9" fill="#E8590C"></circle>
+      <circle cx="80" cy="16" r="9" fill="#E8590C"></circle>
+      <circle cx="146" cy="16" r="9" fill="#E8590C"></circle>
+    </svg>
+  </div>
+</section>
+
+<section class="contenedor seccion-final" aria-label="Otros datos">
+  <div class="rejilla rejilla--300">
+    <div class="dato-contacto">
+      <h2>Coordinación</h2>
+      {%- for c in site.data.coordinacion %}
+      <p>{{ c.nombre }}<br>{{ c.afiliacion }}</p>
+      {%- endfor %}
+    </div>
+    <div class="dato-contacto">
+      <h2>Unirse al grupo</h2>
+      <p>Requisitos y miembros actuales en <a href="{{ '/quienes-somos/' | relative_url }}">Quiénes somos</a>.</p>
+    </div>
+    <div class="dato-contacto">
+      <h2>SEIO</h2>
+      <p>Sociedad de Estadística e Investigación Operativa: <a href="{{ site.seio }}">www.seio.es</a></p>
+    </div>
+  </div>
+</section>
