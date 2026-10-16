@@ -1,0 +1,31 @@
+# Líneas de investigación (borrador pendiente de validar por el grupo).
+# El número de cada línea se pone solo, según el orden de esta lista.
+#   miembros  Lista de nombres tal como aparecen en miembros.yml. Opcional.
+
+- titulo: Diseño óptimo en modelos no lineales
+  descripcion: Criterios D, A, I, c, L y E, teorema de equivalencia general y diseños localmente óptimos.
+  miembros: []
+
+- titulo: Diseños con covariables no controlables
+  descripcion: Diseños cuando parte de las variables se observa pero no se fija, con aplicaciones en medicina personalizada.
+  miembros: []
+
+- titulo: Diseño bayesiano y robusto
+  descripcion: Diseños que incorporan información previa o que protegen frente a errores en la especificación del modelo.
+  miembros: []
+
+- titulo: Submuestreo óptimo para grandes volúmenes de datos
+  descripcion: Selección de submuestras informativas con técnicas de diseño óptimo cuando analizar todos los datos no es viable.
+  miembros: []
+
+- titulo: Diseño para modelos de suavizado
+  descripcion: Diseños para regresión penalizada con splines (P-splines) y otros modelos flexibles.
+  miembros: []
+
+- titulo: Modelos con errores en las variables
+  descripcion: Diseño y estimación cuando las variables explicativas se miden con error.
+  miembros: []
+
+- titulo: Algoritmos para el cálculo de diseños
+  descripcion: Métodos numéricos y metaheurísticos para construir diseños óptimos y frentes de Pareto entre criterios.
+  miembros: []

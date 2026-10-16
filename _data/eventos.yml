@@ -1,0 +1,56 @@
+# Eventos del grupo.
+#
+# «proximo» es el evento destacado en la portada y en Eventos.
+# Si no hay ninguno previsto, borrar el bloque entero o dejar «proximo:» vacío.
+
+proximo:
+  etiqueta: VIII JEDE
+  titulo: VIII Congreso de Jóvenes Investigadores en Diseño de Experimentos y Bioestadística
+  titulo_portada: VIII Congreso de Jóvenes Investigadores en Diseño de Experimentos y Bioestadística (JEDE)
+  descripcion: Para investigadores menores de 35 años, predoctorales o en los dos años siguientes a su doctorado.
+  fechas: 6–9 de julio de 2027
+  nota_fechas: Fechas provisionales
+  lugar: "[Sede], [Ciudad]"
+  web: https://kezrael.github.io/jedeviii/
+
+# Ediciones del congreso JEDE, de la más reciente a la más antigua.
+# Cuando se celebre el próximo, añadirlo arriba del todo de esta lista.
+#   edicion  Número en romanos.
+#   icono    Nombre de un dibujo de _includes/iconos/ (sin .svg). Opcional:
+#            si no hay dibujo para la ciudad, se usa «generico».
+#   web      Enlace a la web de esa edición. Opcional.
+jede:
+  - edicion: VII
+    anio: 2025
+    ciudad: Ciudad Real
+    icono: ciudad-real
+    web: https://sites.google.com/view/jedevii/inicio
+  - edicion: VI
+    anio: 2023
+    ciudad: Pamplona
+    icono: pamplona-2023
+    web: https://www.unav.edu/web/instituto-de-ciencia-de-los-datos-e-inteligencia-artificial/vi-jede
+  - edicion: V
+    anio: 2021
+    ciudad: Almería
+    icono: almeria
+    web: https://www2.ual.es/jede2020/
+  - edicion: IV
+    anio: 2017
+    ciudad: Salamanca
+    icono: salamanca
+    web: https://jede2017.usal.es/
+  - edicion: III
+    anio: 2014
+    ciudad: Pamplona
+    icono: pamplona-2014
+    web: https://www.unavarra.es/historicoActualidad/congresos?contentId=179923
+  - edicion: II
+    anio: 2012
+    ciudad: San Cristóbal de La Laguna
+    icono: la-laguna
+    web: https://www.ull.es/portal/noticias/2012/la-ull-acoge-el-ii-congreso-de-jovenes-investigadores-en-disenos-de-experimentos-y-bioestadistica/
+  - edicion: I
+    anio: 2010
+    ciudad: Toledo
+    icono: toledo

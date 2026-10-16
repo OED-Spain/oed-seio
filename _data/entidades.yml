@@ -1,0 +1,13 @@
+# Entidades participantes (portada).
+#   logo  Ruta del logo dentro de assets/logos/, p. ej. entidades/seio.svg (opcional;
+#         si falta se muestra el nombre).
+#   url   Web de la entidad (opcional).
+
+- nombre: SEIO
+  nombre_largo: Sociedad de Estadística e Investigación Operativa
+  url: https://www.seio.es
+- nombre: "[Logo entidad]"
+- nombre: "[Logo entidad]"
+- nombre: "[Logo entidad]"
+- nombre: "[Logo entidad]"
+- nombre: "[Logo entidad]"

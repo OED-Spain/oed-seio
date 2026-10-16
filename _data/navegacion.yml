@@ -1,0 +1,13 @@
+# Menú principal. El orden de esta lista es el orden del menú.
+- titulo: Inicio
+  url: /
+- titulo: Quiénes somos
+  url: /quienes-somos/
+- titulo: Líneas de investigación
+  url: /lineas/
+- titulo: Software
+  url: /software/
+- titulo: Eventos
+  url: /eventos/
+- titulo: Contacto
+  url: /contacto/

@@ -1,0 +1,252 @@
+# Miembros del grupo.
+#
+# Cada miembro es un bloque que empieza por «- nombre:». Campos:
+#   nombre      Nombre de pila (obligatorio).
+#   apellidos   Apellidos (obligatorio).
+#   afiliacion  Universidad o centro. Si se deja vacío se muestra «[Universidad o centro]».
+#   orcid       Solo el identificador, p. ej. 0000-0002-1825-0097 (opcional).
+#   scholar     Enlace completo al perfil de Google Scholar (opcional).
+#   web         Enlace a una página personal (opcional).
+#   orden       Solo si el orden alfabético no sale bien con los apellidos,
+#               p. ej. para ordenar «de la Calle» por la C (opcional).
+#
+# El orden en este archivo da igual: la web los ordena por apellido.
+# No poner aquí correos electrónicos ni otros datos personales.
+
+- nombre: Rick
+  apellidos: Acosta Vega
+  afiliacion: ""
+  orcid: 0000-0001-7688-0479
+
+- nombre: Mariano
+  apellidos: Amo Salas
+  afiliacion: Universidad de Castilla-La Mancha
+  orcid: 0000-0002-0956-2531
+
+- nombre: Enrique
+  apellidos: Benéitez Andrés
+  afiliacion: Universidad de Salamanca
+  orcid: 0000-0001-9578-1994
+
+- nombre: Edgar
+  apellidos: Benitez Sastoque
+  afiliacion: Universidad de Navarra
+  orcid: 0000-0001-7632-5109
+
+- nombre: M.ª del Puerto
+  apellidos: Blanco de Santiago
+  afiliacion: Consellería de Educación, Xunta de Galicia
+
+- nombre: Manuel J.
+  apellidos: Campuzano
+  afiliacion: Universidad del Magdalena
+  orcid: 0000-0001-7484-9814
+
+- nombre: Víctor Manuel
+  apellidos: Casero Alonso
+  afiliacion: Universidad de Castilla-La Mancha
+  orcid: 0000-0001-8165-5858
+
+- nombre: Álvaro
+  apellidos: Cía Mina
+  afiliacion: Universidad de Navarra
+  orcid: 0000-0003-0081-4074
+
+- nombre: Nelson Alirio
+  apellidos: Cruz Gutierrez
+  afiliacion: Universitat de les Illes Balears
+  orcid: 0000-0002-7370-5111
+
+- nombre: Carlos
+  apellidos: de la Calle Arroyo
+  afiliacion: Universidad de Oviedo
+  orcid: 0000-0002-5099-888X
+  orden: Calle Arroyo
+
+- nombre: Elvira
+  apellidos: Delgado Márquez
+  afiliacion: Universidad de León
+
+- nombre: Marta Maria
+  apellidos: Dolcet Negre
+  afiliacion: Universidad de Salamanca
+  orcid: 0000-0003-3288-8334
+
+- nombre: Roberto
+  apellidos: Dorta Guerra
+  afiliacion: Universidad de La Laguna
+  orcid: 0000-0002-7269-1889
+
+- nombre: Pau
+  apellidos: Fonseca i Casas
+  afiliacion: Universitat Politècnica de Catalunya
+  orcid: 0000-0002-6747-9736
+
+- nombre: Arkaitz
+  apellidos: Galbete Jiménez
+  afiliacion: Universidad Pública de Navarra
+  orcid: 0000-0001-5622-5418
+
+- nombre: Pablo
+  apellidos: García Arce
+  afiliacion: Instituto de Ciencias Matemáticas (ICMAT-CSIC)
+  orcid: 0009-0001-4124-500X
+
+- nombre: Alberto
+  apellidos: García Galindo
+  afiliacion: Universidad de Navarra
+  orcid: 0000-0001-7692-9113
+
+- nombre: Juan José
+  apellidos: García Milla
+  afiliacion: ""
+
+- nombre: Irene
+  apellidos: García-Camacha Gutiérrez
+  afiliacion: Universidad de Castilla-La Mancha
+  orcid: 0000-0003-3296-056X
+
+- nombre: Darian Horacio
+  apellidos: Grass Boada
+  afiliacion: Universidad de Navarra
+  orcid: 0000-0002-9865-1615
+
+- nombre: Guillermo
+  apellidos: Juliá Molina
+  afiliacion: Consejería de Educación, Junta de Castilla y León
+  orcid: 0000-0002-1790-4394
+
+- nombre: Enol
+  apellidos: Junquera Álvarez
+  afiliacion: Universidad de Oviedo
+  orcid: 0000-0001-9379-0125
+
+- nombre: Jesús
+  apellidos: López Fidalgo
+  afiliacion: Universidad de Navarra
+  orcid: 0000-0001-7502-8188
+
+- nombre: Irene
+  apellidos: Mariñas del Collado
+  afiliacion: Universidad de Oviedo
+  orcid: 0000-0002-9717-7747
+
+- nombre: Raúl
+  apellidos: Martín Martín
+  afiliacion: Universidad de Castilla-La Mancha
+  orcid: 0000-0001-9237-9238
+
+- nombre: Ignacio Jesús
+  apellidos: Martínez López
+  afiliacion: Universidad de Almería
+  orcid: 0000-0002-9780-1044
+
+- nombre: José Antonio
+  apellidos: Moler Cuiral
+  afiliacion: Universidad Pública de Navarra
+  orcid: 0000-0002-2391-5081
+
+- nombre: David
+  apellidos: Moreno Alameda
+  afiliacion: Universidad Complutense de Madrid
+  orcid: 0000-0003-4989-9507
+
+- nombre: Alba
+  apellidos: Muñoz del Río
+  afiliacion: Universidad a Distancia de Madrid
+  orcid: 0000-0002-9477-6031
+
+- nombre: Juan José
+  apellidos: Muñoz Muñoz
+  afiliacion: ""
+
+- nombre: Ricardo
+  apellidos: Negrete Gallego
+  afiliacion: Universidad de Castilla-La Mancha
+
+- nombre: Laura
+  apellidos: Núñez González
+  afiliacion: ""
+
+- nombre: Isabel M.ª
+  apellidos: Ortiz Rodríguez
+  afiliacion: Universidad de Almería
+  orcid: 0000-0001-6721-2786
+
+- nombre: JunYi
+  apellidos: Peng-Zhou
+  afiliacion: Universidad Carlos III de Madrid
+  orcid: 0000-0002-1664-2978
+
+- nombre: Sinuhé
+  apellidos: Perea Puente
+  afiliacion: Universidad de Burgos
+  orcid: 0000-0002-5869-5701
+
+- nombre: Carlos J.
+  apellidos: Pérez González
+  afiliacion: Universidad de La Laguna
+  orcid: 0000-0003-0059-7161
+
+- nombre: Fernando
+  apellidos: Plo Alastrué
+  afiliacion: Universidad de Zaragoza
+  orcid: 0000-0003-2203-655X
+
+- nombre: José Luis
+  apellidos: Poveda Marina
+  afiliacion: Universidad de Salamanca
+  orcid: 0000-0003-1090-6538
+
+- nombre: Sergio
+  apellidos: Pozuelo Campos
+  afiliacion: Universidad de Castilla-La Mancha
+  orcid: 0000-0002-8662-3385
+
+- nombre: Roxana
+  apellidos: Rios Moreno
+  afiliacion: Departament d'Educació, Generalitat de Catalunya
+
+- nombre: M.ª Jesús
+  apellidos: Rivas López
+  afiliacion: Universidad de Salamanca
+  orcid: 0000-0003-0714-0519
+
+- nombre: Licesio J.
+  apellidos: Rodríguez Aragón
+  afiliacion: Universidad de Castilla-La Mancha
+  orcid: 0000-0003-4970-3877
+
+- nombre: Juan Manuel
+  apellidos: Rodríguez Díaz
+  afiliacion: Universidad de Salamanca
+  orcid: 0000-0001-8075-9794
+
+- nombre: Maider
+  apellidos: Sada Allo
+  afiliacion: Universidad Pública de Navarra
+  orcid: 0009-0007-5779-7603
+
+- nombre: Leticia
+  apellidos: Sánchez Álvarez
+  afiliacion: LetStat (consultoría estadística)
+
+- nombre: José Guillermo
+  apellidos: Sánchez León
+  afiliacion: Universidad de Salamanca
+  orcid: 0000-0001-8299-6275
+
+- nombre: María Teresa
+  apellidos: Santos Martín
+  afiliacion: Universidad de Salamanca
+  orcid: 0000-0001-9292-825X
+
+- nombre: Àngela
+  apellidos: Sebastià Bargues
+  afiliacion: Universitat de València
+  orcid: 0000-0002-1370-1928
+
+- nombre: F. Javier
+  apellidos: Villarroel Rodríguez
+  afiliacion: Universidad de Salamanca
+  orcid: 0000-0001-6055-9381

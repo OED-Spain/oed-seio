@@ -1,0 +1,29 @@
+# Software del grupo.
+#   tipo        Paquete de R, Aplicación web, ...
+#   plataforma  CRAN, Shiny, Python, ...
+#   enlace      Enlace principal; «texto_enlace» es lo que pone el botón.
+#   codigo      Enlace al código fuente (opcional).
+# Los enlaces que falten no se muestran.
+
+- nombre: optedr
+  tipo: Paquete de R
+  plataforma: CRAN
+  descripcion: Cálculo de diseños óptimos aproximados para modelos no lineales y aumento de diseños existentes.
+  autoria: Carlos de la Calle Arroyo, Jesús López Fidalgo y Licesio J. Rodríguez Aragón
+  enlace: https://cran.r-project.org/package=optedr
+  texto_enlace: Página en CRAN
+  codigo: https://github.com/Kezrael/optedr
+
+- nombre: "[Nombre del servicio]"
+  tipo: Aplicación web
+  plataforma: "[Tecnología]"
+  descripcion: "[Qué hace y para quién es útil, en una frase.]"
+  autoria: "[nombres]"
+  texto_enlace: Abrir la aplicación
+
+- nombre: "[Nombre del servicio]"
+  tipo: Aplicación web
+  plataforma: "[Tecnología]"
+  descripcion: "[Qué hace y para quién es útil, en una frase.]"
+  autoria: "[nombres]"
+  texto_enlace: Abrir la aplicación

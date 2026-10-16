@@ -1,0 +1,14 @@
+# Seminarios del grupo. Se muestran del más reciente al más antiguo.
+#
+# Para añadir uno, copiar este bloque al final de la lista y quitar las «#»:
+#
+# - fecha: 2026-11-20            # AAAA-MM-DD
+#   titulo: Título del seminario
+#   ponente: Nombre Apellidos
+#   afiliacion: Universidad
+#   modalidad: En línea          # En línea / Presencial / Híbrido
+#   enlace: https://...          # diapositivas o grabación (opcional)
+#
+# Mientras la lista esté vacía, la web muestra un aviso de «[Lista de seminarios]».
+
+[]
