@@ -3,7 +3,7 @@
   Parámetros: id (para aria-labelledby), portada (true en la página de inicio).
 {%- endcomment -%}
 {%- assign ev = site.data.eventos.proximo -%}
-{%- if ev -%}
+{%- if ev and ev.mostrar != false -%}
 <section class="contenedor seccion-evento" aria-labelledby="{{ include.id }}">
   <div class="evento">
     <div class="evento__texto">

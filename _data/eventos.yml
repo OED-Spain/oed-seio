@@ -1,9 +1,11 @@
 # Eventos del grupo.
 #
 # «proximo» es el evento destacado en la portada y en Eventos.
-# Si no hay ninguno previsto, borrar el bloque entero o dejar «proximo:» vacío.
+# Para ocultarlo sin perder los datos, poner «mostrar: false»; para volver
+# a enseñarlo, «mostrar: true».
 
 proximo:
+  mostrar: true
   etiqueta: VIII JEDE
   titulo: VIII Congreso de Jóvenes Investigadores en Diseño de Experimentos y Bioestadística
   titulo_portada: VIII Congreso de Jóvenes Investigadores en Diseño de Experimentos y Bioestadística (JEDE)

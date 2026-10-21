@@ -80,7 +80,7 @@ La fecha va siempre como `AAAA-MM-DD`; la web la muestra como «20 noviembre 202
 
 ### Cambiar el próximo evento
 
-En `_data/eventos.yml`, bloque `proximo`: fechas, lugar, web... Aparece en la portada y en Eventos. Si no hay ningún evento previsto, se borra el bloque `proximo` y la sección desaparece.
+En `_data/eventos.yml`, bloque `proximo`: fechas, lugar, web... Aparece en la portada y en Eventos. Si no hay ningún evento previsto, basta con poner `mostrar: false` dentro del bloque y la sección desaparece de las dos páginas; con `mostrar: true` vuelve a aparecer.
 
 ### Añadir una edición del JEDE
 
