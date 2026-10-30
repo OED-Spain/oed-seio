@@ -10,8 +10,8 @@ lang: es
 
 # Dirección de publicación en GitHub Pages: https://oed-spain.github.io/oed-seio/
 # Si algún día se usa un dominio propio, poner aquí ese dominio y dejar baseurl vacío.
-url: https://oed-spain.github.io
-baseurl: /oed-seio
+url: https://oed.seio.es
+baseurl: ""
 
 email: oed@seio.es
 repositorio: https://github.com/OED-Spain/oed-seio
