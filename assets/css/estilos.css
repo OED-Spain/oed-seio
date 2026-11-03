@@ -383,14 +383,17 @@ ul.lista-limpia, .lista-limpia { list-style: none; margin: 0; padding: 0; }
 /* Entidades */
 .entidades { display: flex; flex-direction: column; gap: 28px; padding-top: 64px; padding-bottom: 64px; }
 .entidades h2 { font-size: 24px; letter-spacing: -0.01em; }
+.entidades__lista { display: flex; flex-wrap: wrap; gap: 16px; }
+.entidades__lista > li { max-width: 100%; }
 .entidad {
   height: 110px;
+  min-width: 170px;
   border-radius: 18px;
   background: var(--tarjeta);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  padding: 16px 28px;
   text-align: center;
   font-weight: 700;
   font-size: 15px;
