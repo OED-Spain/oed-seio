@@ -4,7 +4,7 @@ title: Inicio
 ---
 <section class="contenedor portada" aria-labelledby="titulo-portada">
   <div class="portada__texto">
-    <span class="antetitulo">Sociedad de Estadística e Investigación Operativa</span>
+    <span class="antetitulo">Sociedad de Estadística, Investigación Operativa y Ciencia de Datos</span>
     <h1 id="titulo-portada" class="titulo-pagina">Grupo de Trabajo de Diseño de Experimentos</h1>
     <p class="entradilla">Somos el grupo de trabajo de la SEIO dedicado al diseño de experimentos. Reunimos a investigadoras e investigadores de distintas universidades y centros que trabajan en la teoría del diseño óptimo y en su aplicación a problemas reales de la ciencia, la medicina y la industria.</p>
     <div class="botones">
@@ -46,7 +46,7 @@ title: Inicio
 
 <section class="banda" aria-labelledby="entidades">
   <div class="contenedor entidades">
-    <h2 id="entidades">Entidades participantes</h2>
+    <h2 id="entidades">Entidades colaboradoras</h2>
     <ul class="rejilla rejilla--170 lista-limpia">
       {%- for e in site.data.entidades %}
       {%- capture contenido -%}
@@ -60,7 +60,7 @@ title: Inicio
         {%- if e.url %}
         <a class="entidad" href="{{ e.url }}">{{ contenido }}{% if e.nombre_largo and e.logo == nil %}<span class="solo-lectores">: {{ e.nombre_largo }}</span>{% endif %}</a>
         {%- else %}
-        <div class="entidad{% if e.logo == nil %} entidad--vacia{% endif %}">{{ contenido }}</div>
+        <div class="entidad{% if e.nombre contains '[' %} entidad--vacia{% endif %}">{{ contenido }}</div>
         {%- endif %}
       </li>
       {%- endfor %}

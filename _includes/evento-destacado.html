@@ -25,6 +25,9 @@
       <div class="dato">
         <dt class="etiqueta">Dónde</dt>
         <dd class="evento__lugar">{{ ev.lugar }}</dd>
+        {%- if ev.nota_lugar %}
+        <dd class="nota">{{ ev.nota_lugar }}</dd>
+        {%- endif %}
       </div>
     </dl>
       {%- if ev.web %}

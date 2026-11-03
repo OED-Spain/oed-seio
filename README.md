@@ -1,15 +1,15 @@
 # oed-seio
 
-Web del Grupo de Trabajo de Diseño de Experimentos (OED) de la Sociedad de Estadística e Investigación Operativa (SEIO).
+Web del Grupo de Trabajo de Diseño de Experimentos (OED) de la Sociedad de Estadística, Investigación Operativa y Ciencia de Datos (SEIO).
 
-Dirección: <https://oed-spain.github.io/oed-seio/>
+Dirección: <https://oed.seio.es/>
 
 La web está hecha con [Jekyll](https://jekyllrb.com/), que GitHub Pages compila automáticamente: basta con guardar un cambio en la rama `main` y en uno o dos minutos aparece publicado. No hace falta instalar nada para editar contenido.
 
 ## Cómo está organizada
 
 ```
-_config.yml          Título, correo, dirección de la web y del repositorio
+_config.yml          Título, correo y dirección de la web
 _data/               CONTENIDO QUE SE ACTUALIZA (miembros, eventos, software...)
   miembros.yml
   eventos.yml        Próximo evento y ediciones del congreso JEDE
@@ -59,7 +59,7 @@ En `_data/miembros.yml`, añadir un bloque como este en cualquier parte de la li
 ```
 
 - `orcid`, `scholar` y `web` son opcionales; si no se ponen, no aparece el botón.
-- Si se deja `afiliacion: ""`, la web muestra «[Universidad o centro]».
+- Si se deja `afiliacion: ""`, no se muestra ninguna afiliación.
 - Si un apellido empieza por partícula y debe ordenarse por la palabra siguiente, se añade `orden: García López` (ver el ejemplo de «de la Calle Arroyo»).
 - No se ponen correos ni otros datos personales: el repositorio es público.
 
@@ -80,7 +80,7 @@ La fecha va siempre como `AAAA-MM-DD`; la web la muestra como «20 noviembre 202
 
 ### Cambiar el próximo evento
 
-En `_data/eventos.yml`, bloque `proximo`: fechas, lugar, web... Aparece en la portada y en Eventos. Si no hay ningún evento previsto, basta con poner `mostrar: false` dentro del bloque y la sección desaparece de las dos páginas; con `mostrar: true` vuelve a aparecer.
+En `_data/eventos.yml`, bloque `proximo`: fechas, lugar, web... (`nota_fechas` y `nota_lugar` añaden «provisional» o similar debajo; sin `web` no sale el botón). Aparece en la portada y en Eventos. Si no hay ningún evento previsto, basta con poner `mostrar: false` dentro del bloque y la sección desaparece de las dos páginas; con `mostrar: true` vuelve a aparecer.
 
 ### Añadir una edición del JEDE
 

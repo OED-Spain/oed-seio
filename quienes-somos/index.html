@@ -3,7 +3,7 @@ layout: default
 title: Quiénes somos
 antetitulo: Quiénes somos
 titulo_visible: El grupo
-entradilla: El Grupo de Trabajo de Diseño de Experimentos forma parte de la Sociedad de Estadística e Investigación Operativa (SEIO). [Año de creación y dos o tres frases sobre la historia del grupo.]
+entradilla: El Grupo de Trabajo de Diseño de Experimentos forma parte de la Sociedad de Estadística, Investigación Operativa y Ciencia de Datos (SEIO). [Año de creación y dos o tres frases sobre la historia del grupo.]
 ---
 {% include intro.html %}
 
@@ -61,8 +61,6 @@ entradilla: El Grupo de Trabajo de Diseño de Experimentos forma parte de la Soc
           <h3 class="miembro__nombre">{{ nombre_completo }}</h3>
           {%- if m.afiliacion and m.afiliacion != "" %}
           <span class="miembro__afiliacion">{{ m.afiliacion }}</span>
-          {%- else %}
-          <span class="miembro__afiliacion marcador">[Universidad o centro]</span>
           {%- endif %}
         </div>
         {%- if m.orcid or m.scholar or m.web %}

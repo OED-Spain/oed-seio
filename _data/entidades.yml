@@ -1,13 +1,14 @@
-# Entidades participantes (portada).
-#   logo  Ruta del logo dentro de assets/logos/, p. ej. entidades/seio.svg (opcional;
-#         si falta se muestra el nombre).
-#   url   Web de la entidad (opcional).
+# Entidades colaboradoras (portada).
+#   logo          Ruta del logo dentro de assets/logos/, p. ej. entidades/seio.png
+#                 (opcional; si falta se muestra el nombre).
+#   nombre_largo  Nombre completo: texto alternativo del logo.
+#   url           Web de la entidad (opcional).
 
 - nombre: SEIO
-  nombre_largo: Sociedad de Estadística e Investigación Operativa
+  nombre_largo: Sociedad de Estadística, Investigación Operativa y Ciencia de Datos
+  logo: entidades/seio.png
   url: https://www.seio.es
-- nombre: "[Logo entidad]"
-- nombre: "[Logo entidad]"
-- nombre: "[Logo entidad]"
-- nombre: "[Logo entidad]"
-- nombre: "[Logo entidad]"
+- nombre: BIOSTATNET
+  nombre_largo: BIOSTATNET, Red Nacional de Bioestadística
+  logo: entidades/biostatnet.png
+  url: https://biostatnet.com/

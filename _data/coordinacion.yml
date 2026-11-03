@@ -1,5 +1,8 @@
 # Coordinación del grupo (se muestra en «Quiénes somos» y en «Contacto»).
+# El correo solo se muestra en «Contacto».
 - nombre: Carlos de la Calle Arroyo
   afiliacion: Universidad de Oviedo
+  correo: callecarlos@uniovi.es
 - nombre: Alba Muñoz del Río
   afiliacion: Universidad a Distancia de Madrid
+  correo: alba.munoz.d@udima.es

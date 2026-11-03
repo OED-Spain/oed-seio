@@ -397,7 +397,7 @@ ul.lista-limpia, .lista-limpia { list-style: none; margin: 0; padding: 0; }
   color: var(--tinta);
   text-decoration: none;
 }
-.entidad img { max-height: 78px; width: auto; }
+.entidad img { max-height: 78px; max-width: 100%; width: auto; height: auto; }
 .entidad--vacia { font-weight: 400; font-size: 14px; color: var(--texto-suave); }
 a.entidad:hover { box-shadow: 0 0 0 1.5px var(--borde-fuerte); color: var(--tinta); }
 

@@ -28,7 +28,7 @@ entradilla: Para dudas sobre el grupo, propuestas de seminarios o colaboraciones
     <div class="dato-contacto">
       <h2>Coordinación</h2>
       {%- for c in site.data.coordinacion %}
-      <p>{{ c.nombre }}<br>{{ c.afiliacion }}</p>
+      <p>{{ c.nombre }}<br>{{ c.afiliacion }}{% if c.correo %}<br><a href="mailto:{{ c.correo }}">{{ c.correo }}</a>{% endif %}</p>
       {%- endfor %}
     </div>
     <div class="dato-contacto">
@@ -37,7 +37,7 @@ entradilla: Para dudas sobre el grupo, propuestas de seminarios o colaboraciones
     </div>
     <div class="dato-contacto">
       <h2>SEIO</h2>
-      <p>Sociedad de Estadística e Investigación Operativa: <a href="{{ site.seio }}">www.seio.es</a></p>
+      <p>Sociedad de Estadística, Investigación Operativa y Ciencia de Datos: <a href="{{ site.seio }}">www.seio.es</a></p>
     </div>
   </div>
 </section>

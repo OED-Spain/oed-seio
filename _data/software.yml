@@ -3,7 +3,15 @@
 #   plataforma  CRAN, Shiny, Python, ...
 #   enlace      Enlace principal; «texto_enlace» es lo que pone el botón.
 #   codigo      Enlace al código fuente (opcional).
+#   autoria     Opcional: si falta, no se muestra.
 # Los enlaces que falten no se muestran.
+
+- nombre: mODa
+  tipo: Aplicación web
+  plataforma: Web
+  descripcion: "Plataforma que guía el proceso de diseño de un experimento: se define el objetivo, se elige el módulo más adecuado para ese objetivo y se ejecuta para obtener un diseño ajustado al problema planteado. En desarrollo."
+  enlace: https://moda-oed.org/
+  texto_enlace: Abrir la aplicación
 
 - nombre: optedr
   tipo: Paquete de R
@@ -14,16 +22,34 @@
   texto_enlace: Página en CRAN
   codigo: https://github.com/Kezrael/optedr
 
-- nombre: "[Nombre del servicio]"
+- nombre: OEDforFPmodels
+  tipo: Aplicación interactiva
+  plataforma: Mathematica
+  descripcion: Cálculo de diseños óptimos para modelos de polinomios fraccionarios de hasta grado 3.
+  autoria: Víctor Casero Alonso, Jesús López Fidalgo y Weng Kee Wong, con la colaboración de Diego Urruchi
+  enlace: https://github.com/victormanuelcasero/OED_FPmodels
+  texto_enlace: Ver en GitHub
+
+- nombre: OED-hormesis
   tipo: Aplicación web
-  plataforma: "[Tecnología]"
-  descripcion: "[Qué hace y para quién es útil, en una frase.]"
-  autoria: "[nombres]"
+  plataforma: R Shiny
+  descripcion: Cálculo de distintos tipos de diseños óptimos para detectar hormesis y estimar la dosis umbral, con varios modelos y escenarios.
+  autoria: Víctor Casero Alonso, Andrey Pepelyshev y Weng Kee Wong
+  enlace: https://vcaseroalonso.shinyapps.io/OEDhormesis1-Shiny/
   texto_enlace: Abrir la aplicación
 
-- nombre: "[Nombre del servicio]"
+- nombre: AntoineOptimal
   tipo: Aplicación web
-  plataforma: "[Tecnología]"
-  descripcion: "[Qué hace y para quién es útil, en una frase.]"
-  autoria: "[nombres]"
+  plataforma: R Shiny
+  descripcion: Cálculo de diseños D-, Ds-, A- e I-óptimos para la ecuación de Antoine, con respuesta normal homocedástica y heterocedástica.
+  autoria: Carlos de la Calle Arroyo, Jesús López Fidalgo y Licesio J. Rodríguez Aragón
+  enlace: https://kezrael.shinyapps.io/AntoineOptimal/
+  texto_enlace: Abrir la aplicación
+
+- nombre: AddPoints
+  tipo: Aplicación web
+  plataforma: R Shiny
+  descripcion: Aumento D-óptimo de diseños existentes para varios modelos lineales y no lineales.
+  autoria: Carlos de la Calle Arroyo, Mariano Amo Salas, Jesús López Fidalgo, Licesio J. Rodríguez Aragón y Weng Kee Wong
+  enlace: https://kezrael.shinyapps.io/AddPoints
   texto_enlace: Abrir la aplicación

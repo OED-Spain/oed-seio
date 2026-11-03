@@ -9,11 +9,13 @@ proximo:
   etiqueta: VIII JEDE
   titulo: VIII Congreso de Jóvenes Investigadores en Diseño de Experimentos y Bioestadística
   titulo_portada: VIII Congreso de Jóvenes Investigadores en Diseño de Experimentos y Bioestadística (JEDE)
-  descripcion: Para investigadores menores de 35 años, predoctorales o en los dos años siguientes a su doctorado.
-  fechas: 6–9 de julio de 2027
+  descripcion: Pensado especialmente para menores de 35 años, predoctorales o en los dos años siguientes al doctorado, y abierto a cualquier persona interesada.
+  fechas: 7–9 de julio de 2027
   nota_fechas: Fechas provisionales
-  lugar: "[Sede], [Ciudad]"
-  web: https://kezrael.github.io/jedeviii/
+  lugar: Facultad de Ciencias, Oviedo
+  nota_lugar: Sede provisional
+  # Web del congreso: sin «web» no se muestra el botón. Quitar la # cuando esté lista.
+  # web: https://kezrael.github.io/jedeviii/
 
 # Ediciones del congreso JEDE, de la más reciente a la más antigua.
 # Cuando se celebre el próximo, añadirlo arriba del todo de esta lista.
