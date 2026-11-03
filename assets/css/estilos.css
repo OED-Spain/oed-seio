@@ -539,6 +539,24 @@ a.entidad:hover { box-shadow: 0 0 0 1.5px var(--borde-fuerte); color: var(--tint
 .dato-contacto h2 { font-size: 18px; }
 .dato-contacto p { font-size: 16px; line-height: 1.55; color: var(--texto); }
 
+/* ---------- Logotipo ---------- */
+
+.logotipo__todo { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding-bottom: 32px; }
+.logotipo { overflow: hidden; display: flex; flex-direction: column; }
+.logotipo__muestra { display: flex; align-items: center; justify-content: center; padding: 40px 32px; min-height: 220px; }
+.logotipo__muestra--claro { background: var(--tarjeta); border-bottom: 1px solid var(--linea); }
+.logotipo__muestra--oscuro { background: var(--tinta); }
+.logotipo__muestra img { width: 100%; max-width: 360px; height: auto; }
+.logotipo__cuerpo { padding: 26px 30px 30px; display: flex; flex-direction: column; gap: 10px; }
+.logotipo__cuerpo h2 { font-size: 22px; }
+.logotipo__cuerpo p { font-size: 16px; color: var(--texto); }
+.logotipo__uso { padding-top: 40px; }
+.colores { display: flex; flex-direction: column; gap: 8px; font-size: 16px; color: var(--texto); }
+.colores li { display: flex; align-items: center; gap: 10px; }
+.color__muestra { width: 28px; height: 28px; border-radius: 8px; flex: 0 0 auto; }
+.color__muestra--naranja { background: #E8590C; }
+.color__muestra--grafito { background: #2B2B2B; }
+
 /* ---------- Pie ---------- */
 
 .pie { background: var(--tinta); color: var(--pie-texto); }

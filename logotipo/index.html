@@ -1,0 +1,59 @@
+---
+layout: default
+title: Logotipo
+antetitulo: Logotipo
+titulo_visible: Logotipo del grupo
+entradilla: Para presentaciones, carteles y publicaciones relacionadas con las actividades del grupo.
+---
+{%- assign carpeta = '/assets/logos/oed/' -%}
+{%- assign base = 'OED-group_grafito-naranja_' -%}
+{%- assign versiones = "claro,oscuro" | split: "," -%}
+{%- assign formatos = "svg,pdf,png" | split: "," -%}
+{% include intro.html %}
+
+<section class="contenedor logotipo__todo" aria-label="Descarga completa">
+  <a class="boton boton--acento" href="{{ carpeta | append: 'Logos-OED-SEIO.zip' | relative_url }}" download>Descargar todo (ZIP)</a>
+  <p class="nota">Todas las versiones en SVG, PDF y PNG, incluidas las que llevan el fondo, con una nota de uso.</p>
+</section>
+
+<section class="contenedor" aria-label="Versiones">
+  <div class="rejilla rejilla--480">
+    {%- for v in versiones %}
+    {%- assign nombre = base | append: v | append: '_transparente' %}
+    <article class="tarjeta logotipo">
+      <div class="logotipo__muestra logotipo__muestra--{{ v }}">
+        <img src="{{ carpeta | append: 'svg/' | append: nombre | append: '.svg' | relative_url }}" alt="Logotipo del grupo OED, versión para fondos {{ v }}s">
+      </div>
+      <div class="logotipo__cuerpo">
+        <h2>Para fondos {{ v }}s</h2>
+        <p>{% if v == "claro" %}Letras en gris grafito.{% else %}Letras en blanco.{% endif %} Fondo transparente.</p>
+        <div class="botones">
+          {%- for f in formatos %}
+          <a class="boton boton--borde boton--medio" href="{{ carpeta | append: f | append: '/' | append: nombre | append: '.' | append: f | relative_url }}" download>{{ f | upcase }}<span class="solo-lectores">, versión para fondos {{ v }}s</span></a>
+          {%- endfor %}
+        </div>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="contenedor seccion-final logotipo__uso" aria-label="Uso y colores">
+  <div class="rejilla rejilla--300">
+    <div class="dato-contacto">
+      <h2>Formatos</h2>
+      <p><strong>SVG</strong>: web y programas de diseño. <strong>PDF</strong>: LaTeX, Word y PowerPoint. <strong>PNG</strong> (2400 × 926 px): cuando no se admite ninguno de los anteriores.</p>
+    </div>
+    <div class="dato-contacto">
+      <h2>Uso</h2>
+      <p>No deformar el logotipo, cambiar sus colores ni separar sus elementos. Dejar algo de margen libre alrededor.</p>
+    </div>
+    <div class="dato-contacto">
+      <h2>Colores</h2>
+      <ul class="lista-limpia colores">
+        <li><span class="color__muestra color__muestra--naranja"></span>Naranja <code>#E8590C</code></li>
+        <li><span class="color__muestra color__muestra--grafito"></span>Grafito <code>#2B2B2B</code></li>
+      </ul>
+    </div>
+  </div>
+</section>

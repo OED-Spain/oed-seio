@@ -101,6 +101,10 @@ jede:
 
 Mismo procedimiento con `_data/software.yml`, `_data/lineas.yml` y `_data/entidades.yml`; cada archivo explica sus campos en los comentarios del principio. Los logos de entidades se suben a `assets/logos/entidades/` y se indican con `logo: entidades/nombre.svg`.
 
+### Logotipo del grupo
+
+La página `/logotipo/` (enlazada desde el pie) ofrece las versiones transparentes de `assets/logos/oed/` y el archivo `assets/logos/oed/Logos-OED-SEIO.zip` con todas las versiones y una nota de uso. Si cambia el logotipo, hay que sustituir los archivos manteniendo los nombres y **rehacer el ZIP a mano**: GitHub Pages no lo genera.
+
 ## Licencia
 
 El código se distribuye bajo la licencia MIT (ver `LICENSE`). El contenido (textos e imágenes) se distribuye bajo CC BY 4.0, salvo los logotipos, que son propiedad de sus titulares. Las tipografías Rubik y Atkinson Hyperlegible se distribuyen bajo la SIL Open Font License 1.1 (ver `assets/fonts/`).
