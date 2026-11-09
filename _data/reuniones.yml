@@ -1,0 +1,21 @@
+# Reuniones del grupo y seminarios (página Eventos), del más reciente al más
+# antiguo (la web los ordena por fecha).
+#
+#   fecha       Primer día, como AAAA-MM-DD.
+#   fecha_fin   Último día, si dura más de uno (opcional).
+#   titulo      Reunión del grupo, título del seminario, ...
+#   lugar       Ciudad o «En línea» (opcional).
+#   ponente     Para seminarios: nombre y, si se quiere, afiliación (opcional).
+#   enlace      Web, programa, diapositivas o grabación (opcional).
+#
+# Ejemplo de seminario:
+#
+# - fecha: 2027-02-15
+#   titulo: Título del seminario
+#   ponente: Nombre Apellidos (Universidad)
+#   lugar: En línea
+
+- fecha: 2024-11-28
+  fecha_fin: 2024-11-29
+  titulo: Reunión del grupo
+  lugar: Almagro

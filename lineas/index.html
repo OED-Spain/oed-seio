@@ -14,7 +14,9 @@ entradilla: Temas en los que trabajan los miembros del grupo, desde la teoría d
       <div class="linea__cuerpo">
         <h2>{{ l.titulo }}</h2>
         <p>{{ l.descripcion }}</p>
-        <p class="linea__miembros">Miembros: {% if l.miembros and l.miembros.size > 0 %}{{ l.miembros | join: ", " }}{% else %}<span class="marcador">[nombres]</span>{% endif %}</p>
+        {%- if l.miembros and l.miembros.size > 0 %}
+        <p class="linea__miembros">Participan: {{ l.miembros | join: ", " }}</p>
+        {%- endif %}
       </div>
     </li>
     {%- endfor %}

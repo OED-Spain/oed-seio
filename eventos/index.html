@@ -2,8 +2,8 @@
 layout: default
 title: Eventos
 antetitulo: Eventos
-titulo_visible: Jornadas JEDE y seminarios
-entradilla: Desde 2010, el congreso JEDE reúne a jóvenes investigadores en diseño de experimentos y bioestadística, en colaboración con los grupos de trabajo de la SEIO y BIOSTATNET. A lo largo del año organizamos además seminarios del grupo.
+titulo_visible: Jornadas JEDE y reuniones del grupo
+entradilla: Desde 2010, el congreso JEDE reúne a jóvenes investigadores en diseño de experimentos y bioestadística, en colaboración con los grupos de trabajo de la SEIO y BIOSTATNET. El grupo celebra además sus propias reuniones.
 ---
 {%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," -%}
 <div class="pagina-eventos">
@@ -34,38 +34,41 @@ entradilla: Desde 2010, el congreso JEDE reúne a jóvenes investigadores en dis
   </ul>
 </section>
 
-{%- assign seminarios = site.data.seminarios | sort: "fecha" | reverse %}
-<section class="banda banda--borde" aria-labelledby="seminarios">
+{%- assign reuniones = site.data.reuniones | sort: "fecha" | reverse %}
+{%- if reuniones.size > 0 %}
+<section class="banda banda--borde" aria-labelledby="reuniones">
   <div class="contenedor seminarios">
-    <h2 id="seminarios" class="titulo-seccion">Seminarios</h2>
+    <h2 id="reuniones" class="titulo-seccion">Reuniones del grupo</h2>
     <ul class="seminarios__lista">
-      {%- for s in seminarios %}
+      {%- for s in reuniones %}
       {%- assign f = s.fecha | date: "%Y-%m-%d" | split: "-" %}
       {%- assign mes = f[1] | plus: 0 | minus: 1 %}
       <li class="seminario">
-        <span class="seminario__fecha"><time datetime="{{ s.fecha | date: '%Y-%m-%d' }}">{{ f[2] | plus: 0 }} {{ meses[mes] }} {{ f[0] }}</time></span>
+        <span class="seminario__fecha">
+          {%- if s.fecha_fin %}
+          {%- assign g = s.fecha_fin | date: "%Y-%m-%d" | split: "-" %}
+          {%- assign mes_fin = g[1] | plus: 0 | minus: 1 %}
+          <time datetime="{{ s.fecha | date: '%Y-%m-%d' }}">{{ f[2] | plus: 0 }}{% if g[1] != f[1] or g[0] != f[0] %} {{ meses[mes] }}{% endif %}{% if g[0] != f[0] %} {{ f[0] }}{% endif %}</time>–<time datetime="{{ s.fecha_fin | date: '%Y-%m-%d' }}">{{ g[2] | plus: 0 }} {{ meses[mes_fin] }} {{ g[0] }}</time>
+          {%- else %}
+          <time datetime="{{ s.fecha | date: '%Y-%m-%d' }}">{{ f[2] | plus: 0 }} {{ meses[mes] }} {{ f[0] }}</time>
+          {%- endif -%}
+        </span>
         <div class="seminario__cuerpo">
           <span class="seminario__titulo">{{ s.titulo }}</span>
-          <span class="seminario__ponente">{{ s.ponente }}{% if s.afiliacion %} · {{ s.afiliacion }}{% endif %}</span>
+          {%- if s.ponente %}
+          <span class="seminario__ponente">{{ s.ponente }}</span>
+          {%- endif %}
         </div>
-        {%- if s.modalidad %}
-        <span class="seminario__modalidad">{{ s.modalidad }}</span>
+        {%- if s.lugar %}
+        <span class="seminario__modalidad">{{ s.lugar }}</span>
         {%- endif %}
         {%- if s.enlace %}
-        <a class="enlace-flecha" href="{{ s.enlace }}">Diapositivas y grabación<span class="solo-lectores">: {{ s.titulo }}</span><span aria-hidden="true">&nbsp;→</span></a>
+        <a class="enlace-flecha" href="{{ s.enlace }}">Más información<span class="solo-lectores">: {{ s.titulo }}</span><span aria-hidden="true">&nbsp;→</span></a>
         {%- endif %}
-      </li>
-      {%- else %}
-      <li class="seminario">
-        <span class="seminario__fecha marcador">[DD mes AAAA]</span>
-        <div class="seminario__cuerpo">
-          <span class="seminario__titulo">[Lista de seminarios]</span>
-          <span class="seminario__ponente">[Ponente] · [Universidad]</span>
-        </div>
-        <span class="seminario__modalidad">[En línea / presencial]</span>
       </li>
       {%- endfor %}
     </ul>
   </div>
 </section>
+{%- endif %}
 </div>

@@ -1,31 +1,87 @@
-# Líneas de investigación (borrador pendiente de validar por el grupo).
+# Líneas de investigación.
 # El número de cada línea se pone solo, según el orden de esta lista.
-#   miembros  Lista de nombres tal como aparecen en miembros.yml. Opcional.
+#   miembros  Personas que trabajan en la línea, en orden alfabético por
+#             apellido y con el nombre tal como aparece en miembros.yml
+#             (pueden incluirse colaboradores externos). Opcional.
 
 - titulo: Diseño óptimo en modelos no lineales
   descripcion: Criterios D, A, I, c, L y E, teorema de equivalencia general y diseños localmente óptimos.
-  miembros: []
+  miembros:
+    - Mariano Amo Salas
+    - Carlos de la Calle Arroyo
+    - Víctor Manuel Casero Alonso
+    - Irene García-Camacha Gutiérrez
+    - Jesús López Fidalgo
+    - Irene Mariñas del Collado
+    - Alba Muñoz del Río
+    - Sergio Pozuelo Campos
+    - Licesio J. Rodríguez Aragón
+    - Chiara Tommasi
+
+- titulo: Diseños para discriminar entre modelos
+  descripcion: Criterios como la T- y la KL-optimalidad para elegir entre modelos rivales cuando no se sabe cuál describe mejor el fenómeno.
+  miembros:
+    - Carlos de la Calle Arroyo
+    - Álvaro Cía Mina
+    - Jesús López Fidalgo
+    - Licesio J. Rodríguez Aragón
+    - Chiara Tommasi
 
 - titulo: Diseños con covariables no controlables
   descripcion: Diseños cuando parte de las variables se observa pero no se fija, con aplicaciones en medicina personalizada.
-  miembros: []
+  miembros:
+    - Mariano Amo Salas
+    - Carlos de la Calle Arroyo
+    - Jesús López Fidalgo
+    - Licesio J. Rodríguez Aragón
 
 - titulo: Diseño bayesiano y robusto
   descripcion: Diseños que incorporan información previa o que protegen frente a errores en la especificación del modelo.
-  miembros: []
+  miembros:
+    - Mariano Amo Salas
+    - Carlos de la Calle Arroyo
+    - Víctor Manuel Casero Alonso
+    - Jesús López Fidalgo
+    - Alba Muñoz del Río
+    - Licesio J. Rodríguez Aragón
 
 - titulo: Submuestreo óptimo para grandes volúmenes de datos
   descripcion: Selección de submuestras informativas con técnicas de diseño óptimo cuando analizar todos los datos no es viable.
-  miembros: []
+  miembros:
+    - Carlos de la Calle Arroyo
+    - Álvaro Cía Mina
+    - Jesús López Fidalgo
+    - Chiara Tommasi
 
 - titulo: Diseño para modelos de suavizado
   descripcion: Diseños para regresión penalizada con splines (P-splines) y otros modelos flexibles.
-  miembros: []
-
-- titulo: Modelos con errores en las variables
-  descripcion: Diseño y estimación cuando las variables explicativas se miden con error.
-  miembros: []
+  miembros:
+    - Carlos de la Calle Arroyo
 
 - titulo: Algoritmos para el cálculo de diseños
   descripcion: Métodos numéricos y metaheurísticos para construir diseños óptimos y frentes de Pareto entre criterios.
-  miembros: []
+  miembros:
+    - Mariano Amo Salas
+    - Carlos de la Calle Arroyo
+    - Víctor Manuel Casero Alonso
+    - Irene García-Camacha Gutiérrez
+    - Jesús López Fidalgo
+    - Alba Muñoz del Río
+    - Sergio Pozuelo Campos
+    - Licesio J. Rodríguez Aragón
+    - Juan Manuel Rodríguez Díaz
+    - José Guillermo Sánchez León
+
+- titulo: Software estadístico
+  descripcion: Paquetes y aplicaciones que ponen el cálculo y la evaluación de diseños óptimos al alcance de quien los necesita.
+  miembros:
+    - Mariano Amo Salas
+    - Carlos de la Calle Arroyo
+    - Víctor Manuel Casero Alonso
+    - Irene García-Camacha Gutiérrez
+    - Jesús López Fidalgo
+    - Alba Muñoz del Río
+    - Sergio Pozuelo Campos
+    - Licesio J. Rodríguez Aragón
+    - Juan Manuel Rodríguez Díaz
+    - José Guillermo Sánchez León

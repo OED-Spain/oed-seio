@@ -13,7 +13,7 @@ _config.yml          Título, correo y dirección de la web
 _data/               CONTENIDO QUE SE ACTUALIZA (miembros, eventos, software...)
   miembros.yml
   eventos.yml        Próximo evento y ediciones del congreso JEDE
-  seminarios.yml
+  reuniones.yml      Reuniones del grupo y seminarios
   software.yml
   lineas.yml         Líneas de investigación
   entidades.yml      Logos de la portada
@@ -63,20 +63,18 @@ En `_data/miembros.yml`, añadir un bloque como este en cualquier parte de la li
 - Si un apellido empieza por partícula y debe ordenarse por la palabra siguiente, se añade `orden: García López` (ver el ejemplo de «de la Calle Arroyo»).
 - No se ponen correos ni otros datos personales: el repositorio es público.
 
-### Añadir un seminario
+### Añadir una reunión o un seminario
 
-En `_data/seminarios.yml`, sustituir `[]` por la lista de seminarios (o añadir uno más al final):
+En `_data/reuniones.yml`, añadir un bloque a la lista (el orden da igual):
 
 ```yaml
-- fecha: 2026-11-20
-  titulo: Diseños óptimos para modelos de mezcla
-  ponente: Ana García López
-  afiliacion: Universidad de Oviedo
-  modalidad: En línea
-  enlace: https://...
+- fecha: 2024-11-28
+  fecha_fin: 2024-11-29
+  titulo: Reunión del grupo
+  lugar: Almagro
 ```
 
-La fecha va siempre como `AAAA-MM-DD`; la web la muestra como «20 noviembre 2026» y ordena los seminarios del más reciente al más antiguo. `enlace` (diapositivas o grabación) es opcional.
+Las fechas van siempre como `AAAA-MM-DD`; la web las muestra como «28–29 noviembre 2024» y ordena del más reciente al más antiguo. `fecha_fin`, `lugar`, `ponente` (para seminarios) y `enlace` son opcionales. Si la lista queda vacía, la sección no se muestra.
 
 ### Cambiar el próximo evento
 
