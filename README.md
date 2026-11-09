@@ -72,9 +72,10 @@ En `_data/reuniones.yml`, añadir un bloque a la lista (el orden da igual):
   fecha_fin: 2024-11-29
   titulo: Reunión del grupo
   lugar: Almagro
+  icono: almagro
 ```
 
-Las fechas van siempre como `AAAA-MM-DD`; la web las muestra como «28–29 noviembre 2024» y ordena del más reciente al más antiguo. `fecha_fin`, `lugar`, `ponente` (para seminarios) y `enlace` son opcionales. Si la lista queda vacía, la sección no se muestra.
+Las fechas van siempre como `AAAA-MM-DD`; la web las muestra como «28–29 noviembre 2024» y ordena del más reciente al más antiguo. `fecha_fin`, `lugar`, `icono` (como en las ediciones del JEDE), `ponente` (para seminarios) y `enlace` son opcionales. Si la lista queda vacía, la sección no se muestra.
 
 ### Cambiar el próximo evento
 

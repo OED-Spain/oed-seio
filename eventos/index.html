@@ -37,34 +37,36 @@ entradilla: Desde 2010, el congreso JEDE reúne a jóvenes investigadores en dis
 {%- assign reuniones = site.data.reuniones | sort: "fecha" | reverse %}
 {%- if reuniones.size > 0 %}
 <section class="banda banda--borde" aria-labelledby="reuniones">
-  <div class="contenedor seminarios">
+  <div class="contenedor reuniones">
     <h2 id="reuniones" class="titulo-seccion">Reuniones del grupo</h2>
-    <ul class="seminarios__lista">
+    <ul class="rejilla rejilla--reuniones lista-limpia">
       {%- for s in reuniones %}
       {%- assign f = s.fecha | date: "%Y-%m-%d" | split: "-" %}
       {%- assign mes = f[1] | plus: 0 | minus: 1 %}
-      <li class="seminario">
-        <span class="seminario__fecha">
-          {%- if s.fecha_fin %}
-          {%- assign g = s.fecha_fin | date: "%Y-%m-%d" | split: "-" %}
-          {%- assign mes_fin = g[1] | plus: 0 | minus: 1 %}
-          <time datetime="{{ s.fecha | date: '%Y-%m-%d' }}">{{ f[2] | plus: 0 }}{% if g[1] != f[1] or g[0] != f[0] %} {{ meses[mes] }}{% endif %}{% if g[0] != f[0] %} {{ f[0] }}{% endif %}</time>–<time datetime="{{ s.fecha_fin | date: '%Y-%m-%d' }}">{{ g[2] | plus: 0 }} {{ meses[mes_fin] }} {{ g[0] }}</time>
-          {%- else %}
-          <time datetime="{{ s.fecha | date: '%Y-%m-%d' }}">{{ f[2] | plus: 0 }} {{ meses[mes] }} {{ f[0] }}</time>
-          {%- endif -%}
-        </span>
-        <div class="seminario__cuerpo">
-          <span class="seminario__titulo">{{ s.titulo }}</span>
+      <li class="tarjeta edicion reunion">
+        <svg viewBox="0 0 48 48" width="56" height="56" aria-hidden="true" focusable="false" fill="none" stroke="#1C2430" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+          {%- assign icono = s.icono | default: "generico" | append: ".svg" %}
+          {% include iconos/{{ icono }} %}
+        </svg>
+        <div class="edicion__datos">
+          <h3>{{ s.titulo }}</h3>
+          <span class="edicion__lugar">
+            {%- if s.fecha_fin %}
+            {%- assign g = s.fecha_fin | date: "%Y-%m-%d" | split: "-" %}
+            {%- assign mes_fin = g[1] | plus: 0 | minus: 1 -%}
+            <time datetime="{{ s.fecha | date: '%Y-%m-%d' }}">{{ f[2] | plus: 0 }}{% if g[1] != f[1] or g[0] != f[0] %} {{ meses[mes] }}{% endif %}{% if g[0] != f[0] %} {{ f[0] }}{% endif %}</time>–<time datetime="{{ s.fecha_fin | date: '%Y-%m-%d' }}">{{ g[2] | plus: 0 }} {{ meses[mes_fin] }} {{ g[0] }}</time>
+            {%- else -%}
+            <time datetime="{{ s.fecha | date: '%Y-%m-%d' }}">{{ f[2] | plus: 0 }} {{ meses[mes] }} {{ f[0] }}</time>
+            {%- endif -%}
+            {%- if s.lugar %} · {{ s.lugar }}{% endif -%}
+          </span>
           {%- if s.ponente %}
-          <span class="seminario__ponente">{{ s.ponente }}</span>
+          <span class="reunion__ponente">{{ s.ponente }}</span>
+          {%- endif %}
+          {%- if s.enlace %}
+          <a class="enlace-flecha" href="{{ s.enlace }}">Más información<span class="solo-lectores">: {{ s.titulo }}</span><span aria-hidden="true">&nbsp;→</span></a>
           {%- endif %}
         </div>
-        {%- if s.lugar %}
-        <span class="seminario__modalidad">{{ s.lugar }}</span>
-        {%- endif %}
-        {%- if s.enlace %}
-        <a class="enlace-flecha" href="{{ s.enlace }}">Más información<span class="solo-lectores">: {{ s.titulo }}</span><span aria-hidden="true">&nbsp;→</span></a>
-        {%- endif %}
       </li>
       {%- endfor %}
     </ul>

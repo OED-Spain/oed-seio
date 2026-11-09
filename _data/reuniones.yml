@@ -5,6 +5,7 @@
 #   fecha_fin   Último día, si dura más de uno (opcional).
 #   titulo      Reunión del grupo, título del seminario, ...
 #   lugar       Ciudad o «En línea» (opcional).
+#   icono       Dibujo de _includes/iconos/ sin .svg (opcional; si falta, «generico»).
 #   ponente     Para seminarios: nombre y, si se quiere, afiliación (opcional).
 #   enlace      Web, programa, diapositivas o grabación (opcional).
 #
@@ -19,3 +20,4 @@
   fecha_fin: 2024-11-29
   titulo: Reunión del grupo
   lugar: Almagro
+  icono: almagro

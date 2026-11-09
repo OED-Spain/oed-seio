@@ -481,23 +481,13 @@ a.entidad:hover { box-shadow: 0 0 0 1.5px var(--borde-fuerte); color: var(--tint
 .edicion__lugar { font-size: 16px; }
 .edicion__sin-web { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; color: var(--texto-suave); }
 
-.seminarios { display: flex; flex-direction: column; gap: 24px; padding-top: 56px; padding-bottom: 72px; }
-.seminarios__lista { background: var(--tarjeta); border-radius: 20px; list-style: none; margin: 0; padding: 0; }
-.seminario {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 32px;
-  padding: 22px 28px;
-  border-bottom: 1px solid var(--linea);
-}
-.seminario:last-child { border-bottom: 0; }
-.seminario__fecha { flex: 0 0 180px; font-family: var(--fuente-titulos); font-weight: 600; font-size: 16px; }
-.seminario__cuerpo { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
-.seminario__titulo { font-family: var(--fuente-titulos); font-weight: 500; font-size: 18px; }
-.seminario__ponente { font-size: 15px; color: var(--texto-suave); }
-.seminario__modalidad { flex: 0 0 auto; font-size: 14px; padding: 4px 12px; border-radius: 999px; background: var(--banda); }
-.seminario .enlace-flecha { flex: 0 0 auto; }
+/* Reuniones: mismas tarjetas que las ediciones JEDE, en horizontal y sin
+   estirarse a todo el ancho (auto-fill deja huecos libres). */
+.reuniones { display: flex; flex-direction: column; gap: 24px; padding-top: 56px; padding-bottom: 72px; }
+.rejilla--reuniones { grid-template-columns: repeat(auto-fill, minmax(min(380px, 100%), 1fr)); }
+.reunion { flex-direction: row; align-items: center; gap: 20px; }
+.reunion svg { flex: 0 0 auto; }
+.reunion__ponente { font-size: 15px; color: var(--texto-suave); }
 
 /* ---------- Contacto ---------- */
 
